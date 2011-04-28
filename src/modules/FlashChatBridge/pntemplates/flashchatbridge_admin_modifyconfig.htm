@@ -1,0 +1,157 @@
+<!--[*  $Author: Flo $ $Revision: 4 $ $Modtime: 25.10.10 19:36 $ $Id: $  *]-->
+<!--[include file="flashchatbridge_admin_menu.htm"]-->
+<!--[pnajaxheader modname=FlashChatBridge filename=flashchatbridge_admin_modifyconfig.js nobehaviour=true noscriptaculous=true effects=true]-->
+
+
+<div class="z-admincontainer">
+    <div class="z-adminpageicon"><!--[pnimg modname=FlashChatBridge src=admin.gif ]--></div>
+    <h2><!--[gt text="Common Settings"]--></h2>
+    <form class="z-form" action="<!--[pnmodurl modname="FlashChatBridge" type="admin" func="updateconfig"]-->" method="post" enctype="application/x-www-form-urlencoded">
+        <div>
+            <input type="hidden" name="authid" value="<!--[insert name="generateauthkey" module="FlashChatBridge"]-->" />
+            <fieldset>
+                <legend><!--[gt text="Size Settings"]--></legend>
+                <div class="z-formrow">
+                    <label for="flashchatbridge_autosize"><!--[gt text="Autosize"]--></label>
+                    <div id="flashchatbridge_autosize">
+                        <input id="flashchatbridge_autosize_no" type="radio" name="settings[autosize]" value="0" <!--[if $settings.autosize eq 0]-->checked="checked"<!--[/if]--> />
+                        <label for="flashchatbridge_autosize_no"><!--[gt text="No"]--></label>
+                        <input id="flashchatbridge_autosize_yes" type="radio" name="settings[autosize]" value="1" <!--[if $settings.autosize eq 1]-->checked="checked"<!--[/if]--> />
+                        <label for="flashchatbridge_autosize_yes"><!--[gt text="Yes"]--></label>
+                    </div>
+                </div>				
+				<div id="flashchatbridge_autosize_container">				
+					<p class="z-formnote z-informationmsg"><!--[gt text="If autosize is set to no, you must enter a width and height value"]--></p>
+					
+					<div class="z-formrow">
+						<label for="flashchatbridge_width"><!--[gt text="Width"]--></label>
+						<input id="flashchatbridge_width" type="text" name="settings[width]" value="<!--[$settings.width]-->" size="50" maxlength="100" />
+					</div>					
+					<div class="z-formrow">
+						<label for="flashchatbridge_height"><!--[gt text="Height"]--></label>
+						<input id="flashchatbridge_height" type="text" name="settings[height]" value="<!--[$settings.height]-->" size="50" maxlength="100" />
+					</div>					
+				</div>
+            </fieldset>			
+            <fieldset>
+                <legend><!--[gt text="Selectable Chat Types"]--></legend>
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_standard"><!--[gt text="Standard Chat"]--></label>
+					<input id="flashchatbridge_active_chat_standard" type="checkbox" name="settings[active_chat_standard]" value="1" <!--[if $settings.active_chat_standard eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>	
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_html"><!--[gt text="HTML Chat"]--></label>
+					<input id="flashchatbridge_active_chat_html" type="checkbox" name="settings[active_chat_html]" value="1" <!--[if $settings.active_chat_html eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>				
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_avatar"><!--[gt text="Avatar Chat"]--></label>
+					<input id="flashchatbridge_active_chat_avatar" type="checkbox" name="settings[active_chat_avatar]" value="1" <!--[if $settings.active_chat_avatar eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>				
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_live"><!--[gt text="Live Chat"]--></label>
+					<input id="flashchatbridge_active_chat_live" type="checkbox" name="settings[active_chat_live]" value="1" <!--[if $settings.active_chat_live eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>				
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_pocket"><!--[gt text="Pocket Chat"]--></label>
+					<input id="flashchatbridge_active_chat_pocket" type="checkbox" name="settings[active_chat_pocket]" value="1" <!--[if $settings.active_chat_pocket eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>				
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_lite"><!--[gt text="Lite Chat"]--></label>
+					<input id="flashchatbridge_active_chat_lite" type="checkbox" name="settings[active_chat_lite]" value="1" <!--[if $settings.active_chat_lite eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>				
+				<div class="z-formrow">
+					<label for="flashchatbridge_active_chat_banner"><!--[gt text="Banner Chat"]--></label>
+					<input id="flashchatbridge_active_chat_banner" type="checkbox" name="settings[active_chat_banner]" value="1" <!--[if $settings.active_chat_banner eq 1]-->checked=checkd<!--[/if]-->/>
+				</div>				
+			</fieldset>			
+            <fieldset>
+                <legend><!--[gt text="Server Connection Settings"]--></legend>
+					<div class="z-formrow">
+						<label for="flashchatbridge_client_path"><!--[gt text="Client Path"]--></label>
+						<input id="flashchatbridge_client_path" type="text" name="settings[client_path]" value="<!--[$settings.client_path]-->" />
+					</div>			
+					<div class="z-formrow">
+						<label for="flashchatbridge_server_data_path"><!--[gt text="Server Data Path"]--></label>
+						<input id="flashchatbridge_server_data_path" type="text" name="settings[server_data_path]" value="<!--[$settings.server_data_path]-->" />
+					</div>									
+					<div class="z-formrow">
+						<label for="flashchatbridge_init_host"><!--[gt text="Chat server host name or IP"]--></label>
+						<input id="flashchatbridge_init_host" type="text" name="settings[init_host]" value="<!--[$settings.init_host]-->" />
+					</div>	
+					<div class="z-formrow">
+						<label for="flashchatbridge_init_port"><!--[gt text="Chat server port"]--></label>
+						<input id="flashchatbridge_init_port" type="text" name="settings[init_port]" value="<!--[$settings.init_port]-->" />
+					</div>	
+					<div class="z-formrow">
+						<label for="flashchatbridge_init_room"><!--[gt text="Inital Chat Room"]--></label>
+						<input id="flashchatbridge_init_room" type="text" name="settings[init_room]" value="<!--[$settings.init_room]-->" />
+					</div>	
+					<div class="z-formrow">
+						<label for="flashchatbridge_client_type"><!--[gt text="Inital Client Type"]--></label>
+						<select id="flashchatbridge_client_type" name="settings[client_type]" >
+							<!--[if $settings.active_chat_standard eq 1]-->
+							<option value="standard" <!--[if $settings.client_type eq 'standard']-->selected=selected<!--[/if]-->><!--[gt text="Standard Chat"]--></option>
+							<!--[/if]-->
+							<!--[if $settings.active_chat_html eq 1]-->
+							<option value="html" <!--[if $settings.client_type eq 'html']-->selected=selected<!--[/if]-->><!--[gt text="HTML Chat"]--></option>
+							<!--[/if]-->
+							<!--[if $settings.active_chat_avatar eq 1]-->
+							<option value="avatar" <!--[if $settings.client_type eq 'avatar']-->selected=selected<!--[/if]-->><!--[gt text="Avatar Chat"]--></option>
+							<!--[/if]-->
+							<!--[if $settings.active_chat_live eq 1]-->
+							<option value="live" <!--[if $settings.client_type eq 'live']-->selected=selected<!--[/if]-->><!--[gt text="Live Show"]--></option>
+							<!--[/if]-->
+							<!--[if $settings.active_chat_pocket eq 1]-->
+							<option value="pocket" <!--[if $settings.client_type eq 'pocket']-->selected=selected<!--[/if]-->><!--[gt text="Pocket Chat"]--></option>
+							<!--[/if]-->
+							<!--[if $settings.active_chat_lite eq 1]-->
+							<option value="lite" <!--[if $settings.client_type eq 'lite']-->selected=selected<!--[/if]-->><!--[gt text="Lite Chat"]--></option>
+							<!--[/if]-->
+							<!--[if $settings.active_chat_banner eq 1]-->
+							<option value="banner" <!--[if $settings.client_type eq 'banner']-->selected=selected<!--[/if]-->><!--[gt text="Banner Chat"]--></option>																																			
+							<!--[/if]-->
+						</select>
+					</div>						
+					<div id="flashchatbridge_adv_settings_container_hide">		
+						<div class="z-formrow">
+							<label for="flashchatbridge_adv_settings_show">&nbsp;</label>
+							<a id="flashchatbridge_adv_settings_show" href="javascript:void(0);"><!--[gt text="Show advanced settings"]--></a>
+						</div>
+					</div>					
+					<div id="flashchatbridge_adv_settings_container_show">		
+						<div class="z-formrow">
+							<label for="flashchatbridge_adv_settings_hide">&nbsp;</label>
+							<a id="flashchatbridge_adv_settings_hide" href="javascript:void(0);"><!--[gt text="Hide advanced settings"]--></a>											
+						</div>					
+						<p class="z-formnote z-informationmsg"><!--[gt text="Make changes here, only if you realy know what you do!"]--></p>						
+						<div class="z-formrow">
+							<label for="flashchatbridge_init_host_s"><!--[gt text="Secondary server URL"]--></label>
+							<input id="flashchatbridge_init_host_s" type="text" name="settings[init_host_s]" value="<!--[$settings.init_host_s]-->" />
+						</div>	
+						<div class="z-formrow">
+							<label for="flashchatbridge_init_port_s"><!--[gt text="Secondary TCP port"]--></label>
+							<input id="flashchatbridge_init_port_s" type="text" name="settings[init_port_s]" value="<!--[$settings.init_port_s]-->" />
+						</div>
+						<div class="z-formrow">
+							<label for="flashchatbridge_init_host_h"><!--[gt text="HTTP server address"]--></label>
+							<input id="flashchatbridge_init_host_h" type="text" name="settings[init_host_h]" value="<!--[$settings.init_host_h]-->" />
+						</div>	
+						<div class="z-formrow">
+							<label for="flashchatbridge_init_port_h"><!--[gt text="HTTP port"]--></label>
+							<input id="flashchatbridge_init_port_h" type="text" name="settings[init_port_h]" value="<!--[$settings.init_port_h]-->" />
+						</div>										
+					</div>
+            </fieldset>										
+		
+            <!--[pnmodcallhooks hookobject=module hookaction=modifyconfig module=FlashChatBridge]-->
+            <div class="z-formbuttons">
+                <!--[pnbutton src="button_ok.gif" set="icons/small" __alt="Save" __title="Save"]-->
+                <a href="<!--[pnmodurl modname=FlashChatBridge type=admin]-->"><!--[pnimg modname=core src="button_cancel.gif" set="icons/small" __alt="Cancel" __title="Cancel"]--></a>
+            </div>				
+
+			
+		</div>
+	</form>
+            
+    
+</div>

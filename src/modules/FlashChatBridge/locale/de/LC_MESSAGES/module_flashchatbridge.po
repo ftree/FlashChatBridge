@@ -1,0 +1,200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlashChatBridge\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-31 10:05+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Florian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: pnadminapi.php:9
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:8
+msgid "Common Settings"
+msgstr "Algemeine Einstellungen"
+
+#: pnadminapi.php:12
+#: pntemplates/flashchatbridge_admin_flashchatadmin.htm:5
+msgid "123FlashChat Settings"
+msgstr "123FlashChat Einstellungen"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:13
+msgid "Size Settings"
+msgstr "Größe Einstellungen"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:15
+msgid "Autosize"
+msgstr "Automatische Größe"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:18
+msgid "No"
+msgstr "Nein"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:20
+msgid "Yes"
+msgstr "Ja"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:24
+msgid "If autosize is set to no, you must enter a width and height value"
+msgstr "Wenn 'automatische Größe' auf nein gesetzt ist, müssen eine Breite und Höhe eingeben"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:27
+msgid "Width"
+msgstr "Breite"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:31
+msgid "Height"
+msgstr "Height"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:37
+msgid "Selectable Chat Types"
+msgstr "Mögliche Chat Typen"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:39
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:93
+#: pntemplates/flashchatbridge_user_main.htm:28
+msgid "Standard Chat"
+msgstr "Standard Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:43
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:96
+#: pntemplates/flashchatbridge_user_main.htm:31
+msgid "HTML Chat"
+msgstr "HTML Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:47
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:99
+#: pntemplates/flashchatbridge_user_main.htm:34
+msgid "Avatar Chat"
+msgstr "Avatar Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:51
+msgid "Live Chat"
+msgstr "Live Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:55
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:105
+#: pntemplates/flashchatbridge_user_main.htm:40
+msgid "Pocket Chat"
+msgstr "Pocket Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:59
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:108
+#: pntemplates/flashchatbridge_user_main.htm:43
+msgid "Lite Chat"
+msgstr "Lite Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:63
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:111
+#: pntemplates/flashchatbridge_user_main.htm:46
+msgid "Banner Chat"
+msgstr "Banner Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:68
+msgid "Server Connection Settings"
+msgstr "Server Verbindungs Einstellungen"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:70
+msgid "Client Path"
+msgstr "Client Pfad"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:74
+msgid "Server Data Path"
+msgstr "Server Data Pfad"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:78
+msgid "Chat server host name or IP"
+msgstr "Chat-Server-Host-Namen oder die IP"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:82
+msgid "Chat server port"
+msgstr "Chat-Server-Port "
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:86
+msgid "Inital Chat Room"
+msgstr "Default Chatraum"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:90
+msgid "Inital Client Type"
+msgstr "Default Chat"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:102
+#: pntemplates/flashchatbridge_user_main.htm:37
+msgid "Live Show"
+msgstr "Live Show"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:118
+msgid "Show advanced settings"
+msgstr "Zeige erweiterte Einstellungen"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:124
+msgid "Hide advanced settings"
+msgstr "Verstecke erweiterte Einstellungen"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:126
+msgid "Make changes here, only if you realy know what you do!"
+msgstr "Mache sie hier nur Änderungen, wenn sie genau wissen was sie tun"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:128
+msgid "Secondary server URL"
+msgstr "Sekundäre server URL"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:132
+msgid "Secondary TCP port"
+msgstr "Sekundäre TCP-Port "
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:136
+msgid "HTTP server address"
+msgstr "HTTP server Adresse "
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:140
+msgid "HTTP port"
+msgstr "HTTP port"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:148
+msgid "Save"
+msgstr "Speichern"
+
+#: pntemplates/flashchatbridge_admin_modifyconfig.htm:149
+msgid "Cancel"
+msgstr "Abbruch"
+
+#: pntemplates/flashchatbridge_user_main.htm:12
+msgid "Chat"
+msgstr "Chat"
+
+#: pntemplates/flashchatbridge_user_main.htm:14
+msgid "At the Moment in the Chat:"
+msgstr "Im Moment im Chat"
+
+#: pntemplates/flashchatbridge_user_main.htm:16
+#: pntemplates/flashchatbridge_block_online.htm:4
+msgid "Nobody"
+msgstr "Niemand"
+
+#: pntemplates/flashchatbridge_user_main.htm:25
+msgid "Chat Type"
+msgstr "Chat Type"
+
+#: pntemplates/flashchatbridge_user_main.htm:51
+msgid "How should the chat be started?"
+msgstr "Wie soll der Chat gestartet werden?"
+
+#: pntemplates/flashchatbridge_user_main.htm:52
+msgid "in own Window"
+msgstr "in aktuellem Fenster"
+
+#: pntemplates/flashchatbridge_user_main.htm:53
+msgid "in seperate Window"
+msgstr "in neuen Fenster"
+
+#: pntemplates/flashchatbridge_admin_menu.htm:4
+msgid "123FlashChat Integration"
+msgstr "123FlashChat Integration"
+

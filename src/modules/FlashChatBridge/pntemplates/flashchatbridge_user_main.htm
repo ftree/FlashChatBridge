@@ -1,0 +1,58 @@
+<!--[*  $Author: Flo $ $Revision: 5 $ $Modtime: 20.11.10 10:35 $ $Id: $  *]-->
+
+	<script type="text/javascript">
+	// Popup window code
+	function newPopupFC(url) {
+		var chat_type = document.getElementById('flashchatbridge_client_type');
+		url = url + "&client_type=" + chat_type.value;
+		popupWindow = window.open(
+			url,'popUpWindow','height=700,width=800,left=10,top=10,resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=no')
+	}
+	</script>
+
+
+<h1><!--[gt text="Chat"]--></h1>
+<fieldset>
+	<h4><!--[gt text="At the Moment in the Chat:"]--></h4>
+	<!--[if $Count eq 0 ]-->
+		<!--[gt text="Nobody"]-->
+	<!--[else]-->
+		<!--[foreach from=$Users item=User]-->
+		<strong><!--[$User|userprofilelink]--></strong>, 
+		<!--[/foreach]-->
+	<!--[/if]-->
+		
+	<br /><br />
+	<form action="<!--[pnmodurl modname="FlashChatBridge" type="user" func="showChat"]-->" method="post">
+		<h4><!--[gt text="Chat Type"]--></h4>	
+		<select id="flashchatbridge_client_type" name="client_type" >
+			<!--[if $settings.active_chat_standard eq 1]-->
+			<option value="standard" <!--[if $settings.client_type eq 'standard']-->selected=selected<!--[/if]-->><!--[gt text="Standard Chat"]--></option>
+			<!--[/if]-->
+			<!--[if $settings.active_chat_html eq 1]-->
+			<option value="html" <!--[if $settings.client_type eq 'html']-->selected=selected<!--[/if]-->><!--[gt text="HTML Chat"]--></option>
+			<!--[/if]-->
+			<!--[if $settings.active_chat_avatar eq 1]-->
+			<option value="avatar" <!--[if $settings.client_type eq 'avatar']-->selected=selected<!--[/if]-->><!--[gt text="Avatar Chat"]--></option>
+			<!--[/if]-->
+			<!--[if $settings.active_chat_live eq 1]-->
+			<option value="live" <!--[if $settings.client_type eq 'live']-->selected=selected<!--[/if]-->><!--[gt text="Live Show"]--></option>
+			<!--[/if]-->
+			<!--[if $settings.active_chat_pocket eq 1]-->
+			<option value="pocket" <!--[if $settings.client_type eq 'pocket']-->selected=selected<!--[/if]-->><!--[gt text="Pocket Chat"]--></option>
+			<!--[/if]-->
+			<!--[if $settings.active_chat_lite eq 1]-->
+			<option value="lite" <!--[if $settings.client_type eq 'lite']-->selected=selected<!--[/if]-->><!--[gt text="Lite Chat"]--></option>
+			<!--[/if]-->
+			<!--[if $settings.active_chat_banner eq 1]-->
+			<option value="banner" <!--[if $settings.client_type eq 'banner']-->selected=selected<!--[/if]-->><!--[gt text="Banner Chat"]--></option>																																			
+			<!--[/if]-->
+		</select>	
+		<br /><br />
+		
+		<h4><!--[gt text="How should the chat be started?"]--></h4>	
+		<input type="submit" value="<!--[gt text="in own Window"]-->"/>
+		<input type="button" value="<!--[gt text="in seperate Window"]-->" onclick="JavaScript:newPopupFC('<!--[pnmodurl modname="FlashChatBridge" type="user" func="showChat" popup=true]-->');"/>
+	</form>
+</fieldset>	
+

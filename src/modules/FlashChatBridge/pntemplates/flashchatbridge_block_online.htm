@@ -1,0 +1,10 @@
+<!--[*  $Author: Flo $ $Revision: 3 $ $Modtime: 23.10.10 18:53 $ $Id: $  *]-->
+
+<!--[if $Count eq 0 ]-->
+	<!--[gt text="Nobody"]-->
+<!--[else]-->
+	<!--[foreach from=$Users item=User]-->
+	<strong><!--[$User|userprofilelink]--></strong><br>
+	<!--[/foreach]-->
+<!--[/if]-->
+<br />
